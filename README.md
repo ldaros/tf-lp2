@@ -6,6 +6,7 @@ Landingpage TeuFuturo squad 4.
 
 ## Utilize a seguite organização de pastas:
 
+```
 src/
 -- App/
 ---- index.jsx
@@ -13,6 +14,7 @@ src/
 -- List/
 ---- index.jsx
 ---- style.scss
+```
 
 [Artigo Sobre](https://www.robinwieruch.de/react-folder-structure)
 
