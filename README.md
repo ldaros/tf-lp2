@@ -4,7 +4,7 @@ Landingpage TeuFuturo squad 4.
 
 ## [Prototipo no Figma](https://www.figma.com/file/ZtBINqAhmxyu3ZBikTsaxv/tf-landingpage?node-id=0%3A1)
 
-## Utilize a seguite organização de pastas:
+## Utilize a seguinte organização de pastas:
 
 ```
 src/
