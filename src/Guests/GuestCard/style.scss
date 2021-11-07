@@ -1,0 +1,12 @@
+.guest-card {
+  border-radius: 12px;
+  background-color: #00838f;
+  color: white;
+
+  img {
+    height: 95%;
+    width: 95%;
+
+    object-fit: contain;
+  }
+}
