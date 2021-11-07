@@ -3,6 +3,7 @@ import { createTheme, ThemeProvider } from "@mui/material/styles";
 import { cyan, lightGreen } from "@mui/material/colors";
 // import { Grid, Button } from "@mui/material";
 import Hero from "../Hero";
+import Guests from "../Guests";
 import "./style.scss";
 
 // Tema personalizado
@@ -26,6 +27,7 @@ export default class index extends Component {
       // cores do material-ui
       <ThemeProvider theme={theme}>
         <Hero />
+        <Guests />
       </ThemeProvider>
     );
   }
