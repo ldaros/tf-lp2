@@ -1,6 +1,7 @@
+// Componente App, renderiza o corpo da aplicação
 import React, { Component } from "react";
 import { createTheme, ThemeProvider } from "@mui/material/styles";
-import { cyan, lightGreen } from "@mui/material/colors";
+import { cyan, lightGreen } from "@mui/material/colors"; // Cores do material-ui
 // import { Grid, Button } from "@mui/material";
 import Hero from "../Hero";
 import Guests from "../Guests";
@@ -24,10 +25,10 @@ const theme = createTheme({
 export default class index extends Component {
   render() {
     return (
-      // cores do material-ui
+      // Componente ThemeProvider, aplica o tema personalizado
       <ThemeProvider theme={theme}>
-        <Hero />
-        <Guests />
+        <Hero /> {/* Cabeçalho da pagina, onde fica o logo*/}
+        <Guests /> {/* Componente Guests, onde fica a lista de convidados */}
       </ThemeProvider>
     );
   }

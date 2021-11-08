@@ -1,15 +1,15 @@
 import React from "react";
 import "./style.scss";
-import tenorio from "./tenorio.png";
-import bueno from "./bueno.png";
-import { Grid, Typography, Box } from "@mui/material";
-import { lightGreen } from "@mui/material/colors";
+import tenorio from "./tenorio.png"; // Imagem Perfil do Tenorio
+import bueno from "./bueno.png"; // Imagem Perfil do Bueno
+import { Grid, Typography } from "@mui/material"; // Componentes Material UI
+import { lightGreen } from "@mui/material/colors"; // Cores do material
 
+// Estilos de texto
 const subText = {
   fontSize: "0.8rem",
   lineHeight: "unset",
 };
-
 const headerText = {
   fontSize: "1.1rem",
   fontWeight: "bold",
@@ -17,6 +17,7 @@ const headerText = {
 
 export default function index(props) {
   if (props.tenorio)
+    // Se o card for do Tenorio
     return (
       <Grid container spacing={1} className="guest-card" mb={1} pl={1} pr={1}>
         <Grid item xs={4} sx={{ alignSelf: "flex-end" }}>
@@ -38,6 +39,7 @@ export default function index(props) {
         </Grid>
       </Grid>
     );
+  // Se o card for do Bueno
   else if (props.bueno)
     return (
       <Grid container spacing={1} className="guest-card" mb={1} pl={1} pr={1}>
