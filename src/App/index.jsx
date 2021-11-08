@@ -1,28 +1,29 @@
-// Componente App, renderiza o corpo da aplicação
 import React, { Component } from "react";
+
 import { createTheme, ThemeProvider } from "@mui/material/styles";
 import { cyan, lightGreen } from "@mui/material/colors"; // Cores do material-ui
-// import { Grid, Button } from "@mui/material";
+
 import Hero from "../Hero";
 import Guests from "../Guests";
-import "./style.scss";
 
 // Tema personalizado
 const theme = createTheme({
   palette: {
     primary: {
       main: cyan[800], // #00838F
+      dark: cyan[900], // #006064
+      contrastText: "#fff",
     },
     secondary: {
       main: lightGreen[700], // #689F38
+      light: lightGreen["A400"], // #B2FF59
+      contrastText: "#fff",
     },
-    accent: {
-      main: lightGreen["A400"], // #B2FF59
-    },
+    grayText: "#656565",
   },
 });
 
-export default class index extends Component {
+export default class App extends Component {
   render() {
     return (
       // Componente ThemeProvider, aplica o tema personalizado
