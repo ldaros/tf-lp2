@@ -1,35 +1,35 @@
 import React, { Component } from "react";
+
 import { createTheme, ThemeProvider } from "@mui/material/styles";
-import { cyan, lightGreen } from "@mui/material/colors";
-// import { Grid, Button } from "@mui/material";
+import { cyan, lightGreen } from "@mui/material/colors"; // Cores do material-ui
+
 import Hero from "../Hero";
 import Guests from "../Guests";
-import Localização from "../Localização";
-import "./style.scss";
 
 // Tema personalizado
 const theme = createTheme({
 	palette: {
 		primary: {
 			main: cyan[800], // #00838F
+			dark: cyan[900], // #006064
+			contrastText: "#fff",
 		},
 		secondary: {
 			main: lightGreen[700], // #689F38
+			light: lightGreen["A400"], // #B2FF59
+			contrastText: "#fff",
 		},
-		accent: {
-			main: lightGreen["A400"], // #B2FF59
-		},
+		grayText: "#656565",
 	},
 });
 
-export default class index extends Component {
+export default class App extends Component {
 	render() {
 		return (
-			// cores do material-ui
+			// Componente ThemeProvider, aplica o tema personalizado
 			<ThemeProvider theme={theme}>
-				<Hero />
-				<Guests />
-				<Localização />
+				<Hero /> {/* Cabeçalho da pagina, onde fica o logo*/}
+				<Guests /> {/* Componente Guests, onde fica a lista de convidados */}
 			</ThemeProvider>
 		);
 	}
