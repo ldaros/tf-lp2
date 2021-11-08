@@ -6,6 +6,7 @@ import Hero from "../Hero";
 import Guests from "../Guests";
 import "./style.scss";
 
+//teste de commit 2
 // Tema personalizado
 const theme = createTheme({
   palette: {
