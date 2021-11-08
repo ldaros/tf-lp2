@@ -1,15 +1,20 @@
 import React from "react";
 import "./style.scss";
 import { Grid, Typography } from "@mui/material";
+import { useTheme } from "@mui/material/styles";
+import { ReactComponent as ImgLocalizacao } from "./img-localizacao.svg";
 
 const TextoLocalizacao = {
 	fontSize: "35px",
 	fontHeight: "bold",
 };
 
-export default function index() {
+export default function LocalizacaoCard() {
+	const theme = useTheme(); // importando o tema do material-ui
+
 	return (
 		<Grid
+			sx={{ backgroundColor: theme }}
 			x
 			container
 			spacing={1}
@@ -29,8 +34,14 @@ export default function index() {
 					Localização
 				</Typography>
 			</Grid>
+
+			{/* arrumar posicionamento da imagem */}
+			<Grid>
+				<ImgLocalizacao className="localizacao" />
+			</Grid>
 			{/* adicionando grid para ajustar elementos */}
 			<Grid xs={1}></Grid>
+
 			<Grid item xs={6}>
 				{/*TODO: Ajustar margins, paddings, espaçamento e imagem.
             Bordas no mapa */}
@@ -48,6 +59,7 @@ export default function index() {
 					height="350"
 					allowfullscreen=""
 					loading="lazy"
+					border-radius="55px"
 				></iframe>
 			</Grid>
 		</Grid>
