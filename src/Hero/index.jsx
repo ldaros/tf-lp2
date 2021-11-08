@@ -1,42 +1,56 @@
 import React from "react";
-import "./style.scss"; // Folha de estilo
+
 import { Grid, Typography } from "@mui/material"; // Componentes Material UI
-import { lightGreen } from "@mui/material/colors"; // Cores do material
-import { ReactComponent as LogoSVG } from "./logo.svg"; // Logo Feira do Livro
+import { useTheme } from "@mui/material/styles"; // Estilos Material UI
+import Image from "mui-image"; // Componente para imagens
+
+import Logo from "./media/logo.svg";
+import BG from "./media/head_temp.png";
 
 // TODO: Trocar a imagen de fundo por um video.
-// TODO: Responsividade.
 
-export default function index() {
+export default function Hero() {
+  const theme = useTheme();
+
   return (
-    // grid é um container que divide a tela em 12 colunas.
     <Grid
       container // Este componente se comporta como um container.
       spacing={1} // Espaçamento entre as colunas.
       className="header" // Classe CSS.
       alignItems="center" // Centraliza o conteúdo na vertical.
-      paddingX={3} // Espaçamento horizontal.
-      paddingY={3} // Espaçamento vertical.
+      paddingX={{ xs: 3, md: 20 }}
+      paddingY={4} // Espaçamento vertical.
+      sx={{
+        backgroundImage: `url(${BG})`,
+        backgroundSize: "cover",
+        backgroundPosition: "center",
+        backgroundRepeat: "no-repeat",
+      }}
     >
-      <Grid item xs={2}></Grid> {/* Coluna vazia */}
       {/* Coluna com o logo */}
-      <Grid item xs={8} align="center">
-        <LogoSVG className="Logo" />
+      <Grid item xs={12} align="center">
+        <Image
+          src={Logo}
+          sx={{ maxHeight: { xs: "120px", md: "190px" } }}
+          fit="contain"
+          easing="none"
+          shift="bottom"
+        />
       </Grid>
-      <Grid item xs={2}></Grid> {/* Coluna vazia */}
-      <Grid item xs={1}></Grid> {/* Coluna vazia */}
-      {/* Coluna com o título */}
-      <Grid item xs={10} align="center">
-        {/* Titulo abaixo da logo */}
-        <Typography color="white">
-          Participe da Feira do Livro 2021!{" "}
-        </Typography>
 
-        <Typography color={lightGreen["A400"]}>
+      {/* Coluna com o título */}
+      <Grid item xs={12} align="center" mt={2}>
+        <Typography variant="body1" color="white" fontWeight="bold">
+          Participe da Feira do Livro 2021!
+        </Typography>
+        <Typography
+          variant="body1"
+          fontWeight="bold"
+          color={theme.palette.secondary.light}
+        >
           Dias 8 a 15 de Dezembro.
         </Typography>
       </Grid>
-      <Grid item xs={1}></Grid>
     </Grid>
   );
 }
