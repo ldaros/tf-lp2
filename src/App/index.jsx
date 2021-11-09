@@ -5,6 +5,7 @@ import { cyan, lightGreen } from "@mui/material/colors"; // Cores do material-ui
 
 import Hero from "../Hero";
 import Guests from "../Guests";
+import Local from "../Local";
 
 // Tema personalizado
 const theme = createTheme({
@@ -28,8 +29,9 @@ export default class App extends Component {
     return (
       // Componente ThemeProvider, aplica o tema personalizado
       <ThemeProvider theme={theme}>
-        <Hero /> {/* Cabeçalho da pagina, onde fica o logo*/}
-        <Guests /> {/* Componente Guests, onde fica a lista de convidados */}
+        <Hero /> {/* Cabeçalho da pagina */}
+        <Guests /> {/* Seção Convidados */}
+        <Local /> {/* Seção Localização */}
       </ThemeProvider>
     );
   }
