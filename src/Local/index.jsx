@@ -71,7 +71,7 @@ export default function Local() {
           width="100%"
           height="100%"
           style={styleMapa}
-          allowfullscreen=""
+          allowFullScreen=""
           loading="lazy"
           title="Mapa"
         ></iframe>
