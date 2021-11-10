@@ -30,6 +30,7 @@ export default function Local() {
       sx={{ backgroundColor: theme.palette.primary.main }}
       paddingX={{ xs: 3, md: 20 }}
       paddingY={3}
+      pb={5}
     >
       <Grid item xs={12} align="center">
         <Typography
