@@ -1,6 +1,6 @@
 import React from "react";
 
-import { Grid, Typography } from "@mui/material";
+import { Grid, Typography, Grow } from "@mui/material";
 import { useTheme } from "@mui/material/styles";
 import Image from "mui-image"; // Componente para imagens
 
@@ -65,17 +65,19 @@ export default function Local() {
         </Typography>
       </Grid>
 
-      <Grid item xs={12} md={6} sx={{ height: { xs: "350px", md: "400px" } }}>
-        <iframe
-          src={MAPA}
-          width="100%"
-          height="100%"
-          style={styleMapa}
-          allowFullScreen=""
-          loading="lazy"
-          title="Mapa"
-        ></iframe>
-      </Grid>
+      <Grow in={true} timeout={5000}>
+        <Grid item xs={12} md={6} sx={{ height: { xs: "350px", md: "400px" } }}>
+          <iframe
+            src={MAPA}
+            width="100%"
+            height="100%"
+            style={styleMapa}
+            allowFullScreen=""
+            loading="lazy"
+            title="Mapa"
+          ></iframe>
+        </Grid>
+      </Grow>
     </Grid>
   );
 }

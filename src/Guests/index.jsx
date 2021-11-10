@@ -1,5 +1,5 @@
 import React from "react";
-import { Grid, Typography } from "@mui/material"; // Componentes Material UI
+import { Grid, Typography, Slide } from "@mui/material"; // Componentes Material UI
 import { useTheme } from "@mui/material/styles";
 
 import Guest from "./Guest"; // Componente de Card de convidado
@@ -54,12 +54,16 @@ export default function Guests() {
         </Typography>
       </Grid>
 
-      <Grid item xs={12} md={6}>
-        <Guest convidado={convidados.tenorio} />
-      </Grid>
-      <Grid item xs={12} md={6}>
-        <Guest convidado={convidados.bueno} even />
-      </Grid>
+      <Slide direction="right" in={true} timeout={1000} mountOnEnter>
+        <Grid item xs={12} md={6}>
+          <Guest convidado={convidados.tenorio} />
+        </Grid>
+      </Slide>
+      <Slide direction="left" in={true} timeout={1000} mountOnEnter>
+        <Grid item xs={12} md={6}>
+          <Guest convidado={convidados.bueno} even />
+        </Grid>
+      </Slide>
     </Grid>
   );
 }

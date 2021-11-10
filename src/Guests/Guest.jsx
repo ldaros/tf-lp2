@@ -20,6 +20,9 @@ export default function Guest(props) {
         display: "flex",
         backgroundColor: theme.palette.primary.main,
         height: "100%",
+        "&:hover, &:active, &:focus": {
+          boxShadow: "5px 2px 20px #00838F",
+        },
       }}
     >
       {props.even ? null : media}
