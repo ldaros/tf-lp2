@@ -11,13 +11,16 @@ export default function Footer() {
       container
       spacing={2}
       alignItems="center"
-      paddingX={{ xs: 3, md: 30 }}
+      paddingX={{ xs: 3, sm: 8, md: 20, lg: 30 }}
       paddingY={3}
     >
       <Grid item xs={12} align="center" mt={1}>
         <Typography
           variant="body2"
-          sx={{ textAlign: "left", fontSize: { xs: "0.6em", md: "0.8em" } }}
+          sx={{
+            textAlign: "left",
+            fontSize: { xs: "0.6em", sm: "0.7em", md: "0.8em" },
+          }}
         >
           A Feira do Livro não se responsabiliza por qualquer incidente
           relacionado a ingestão de papel. Todos os livros na feira são vendidos
@@ -30,7 +33,7 @@ export default function Footer() {
       <Grid item xs={12} align="center" mt={2}>
         <Image
           src={imgFooter}
-          sx={{ maxWidth: { xs: "70%", md: "30%" } }}
+          sx={{ maxWidth: { xs: "60%", sm: "40%", md: "30%" } }}
         ></Image>
       </Grid>
     </Grid>

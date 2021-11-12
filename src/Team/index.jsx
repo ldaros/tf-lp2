@@ -1,6 +1,6 @@
 import React from "react";
 
-import { Grid, Typography } from "@mui/material"; // Componentes Material UI
+import { Grid, Typography, Slide } from "@mui/material"; // Componentes Material UI
 import { useTheme } from "@mui/material/styles";
 
 import Member from "./Member";
@@ -48,12 +48,15 @@ const membros = [
 
 export default function Team() {
   const theme = useTheme(); // Importação do tema do Material UI
+  let timeout = 1000;
 
   // Criando um componente para cada membro
   const membrosList = membros.map((membro, i) => (
-    <Grid item xs={6} md={3} key={"t" + i}>
-      <Member membro={membro} />
-    </Grid>
+    <Slide direction="right" in={true} timeout={(timeout += 500)}>
+      <Grid item xs={6} sm={3} md={3} key={"t" + i}>
+        <Member membro={membro} />
+      </Grid>
+    </Slide>
   ));
 
   return (
@@ -61,9 +64,9 @@ export default function Team() {
       container
       spacing={2}
       alignItems="stretch"
-      paddingX={{ xs: 3, md: 20 }}
+      paddingX={{ xs: 3, sm: 8, md: 20, lg: 30 }}
       paddingY={3}
-      pb={5}
+      pb={{ xs: 5, md: 8 }}
       sx={{ backgroundColor: "#EDEDED" }}
     >
       <Grid item xs={12}>
@@ -71,12 +74,19 @@ export default function Team() {
           variant="h5"
           align="center"
           color={theme.palette.primary.dark}
+          sx={{ fontSize: { md: "1.9em" } }}
           mb={1}
         >
           Nosso Time
         </Typography>
 
-        <Typography mb={3} variant="body2" align="center" color="#656565">
+        <Typography
+          mb={3}
+          variant="body2"
+          align="center"
+          color="#656565"
+          sx={{ fontSize: { md: "1em" } }}
+        >
           Pressione no avatar para obter informações sobre contato
         </Typography>
       </Grid>
