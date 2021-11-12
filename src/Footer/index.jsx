@@ -19,6 +19,7 @@ export default function Footer() {
           variant="body2"
           sx={{
             textAlign: "left",
+            textJustify: "inter-word",
             fontSize: { xs: "0.6em", sm: "0.7em", md: "0.8em" },
           }}
         >

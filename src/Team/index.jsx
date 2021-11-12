@@ -52,8 +52,8 @@ export default function Team() {
 
   // Criando um componente para cada membro
   const membrosList = membros.map((membro, i) => (
-    <Slide direction="right" in={true} timeout={(timeout += 500)}>
-      <Grid item xs={6} sm={3} md={3} key={"t" + i}>
+    <Slide direction="right" in={true} timeout={(timeout += 500)} key={"t" + i}>
+      <Grid item xs={6} sm={3} md={3}>
         <Member membro={membro} />
       </Grid>
     </Slide>

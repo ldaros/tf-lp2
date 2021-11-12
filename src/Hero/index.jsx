@@ -6,8 +6,17 @@ import Image from "mui-image"; // Componente para imagens
 
 import Logo from "./media/logo.svg";
 import BG from "./media/head_temp.png";
+import Video from "./media/video_bg.webm";
 
-// TODO: Trocar a imagen de fundo por um video.
+const videoBg = {
+  position: "absolute",
+  top: 0,
+  left: 0,
+  width: "100%",
+  height: "100%",
+  objectFit: "cover",
+  zIndex: -1,
+};
 
 export default function Hero() {
   const theme = useTheme();
@@ -20,13 +29,12 @@ export default function Hero() {
       alignItems="center" // Centraliza o conteúdo na vertical.
       paddingX={{ xs: 3, sm: 8, md: 20, lg: 30 }}
       paddingY={4} // Espaçamento vertical.
-      sx={{
-        backgroundImage: `url(${BG})`,
-        backgroundSize: "cover",
-        backgroundPosition: "center",
-        backgroundRepeat: "no-repeat",
-      }}
+      position="relative" // Posição relativa.
     >
+      <video autoPlay loop muted controls={false} style={videoBg} poster={BG}>
+        <source src={Video} type="video/webm" />
+      </video>
+
       {/* Coluna com o logo */}
       <Grid item xs={12} align="center">
         <Image
