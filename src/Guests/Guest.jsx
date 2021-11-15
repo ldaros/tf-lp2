@@ -8,7 +8,7 @@ export default function Guest(props) {
   const media = (
     <CardMedia
       component="img"
-      sx={{ width: 100, alignSelf: "flex-end" }}
+      sx={{ width: { xs: 100, md: 130 }, alignSelf: "flex-end" }}
       image={props.convidado.img}
       alt={props.convidado.nome}
     />

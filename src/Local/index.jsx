@@ -28,16 +28,16 @@ export default function Local() {
       spacing={2}
       alignItems="center"
       sx={{ backgroundColor: theme.palette.primary.main }}
-      paddingX={{ xs: 3, md: 20 }}
+      paddingX={{ xs: 3, sm: 8, md: 20, lg: 30 }}
       paddingY={3}
-      pb={5}
+      pb={{ xs: 5, md: 8 }}
     >
       <Grid item xs={12} align="center">
         <Typography
           variant="h5"
           align="center"
           color="white"
-          sx={{ mb: { xs: 1, md: 3 } }}
+          sx={{ mb: { xs: 1, md: 3 }, fontSize: { md: "1.9em" } }}
           mt={-1}
         >
           Localização

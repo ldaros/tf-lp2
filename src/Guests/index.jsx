@@ -30,15 +30,16 @@ export default function Guests() {
       container
       spacing={2}
       alignItems="stretch"
-      paddingX={{ xs: 3, md: 20 }}
+      paddingX={{ xs: 3, sm: 8, md: 20, lg: 30 }}
       paddingY={3}
-      pb={5}
+      pb={{ xs: 5, md: 8 }}
     >
       <Grid item xs={12}>
         <Typography
           variant="h5"
           align="center"
           color={theme.palette.primary.dark}
+          sx={{ fontSize: { md: "1.9em" } }}
           mb={1}
         >
           Convidados
@@ -49,18 +50,19 @@ export default function Guests() {
           variant="body2"
           align="center"
           color={theme.palette.grayText}
+          sx={{ fontSize: { md: "1em" } }}
         >
           Confira algums dos autores presentes nesta edição da Feira do Livro:
         </Typography>
       </Grid>
 
       <Slide direction="right" in={true} timeout={1000} mountOnEnter>
-        <Grid item xs={12} md={6}>
+        <Grid item xs={12} sm={6} md={6}>
           <Guest convidado={convidados.tenorio} />
         </Grid>
       </Slide>
       <Slide direction="left" in={true} timeout={1000} mountOnEnter>
-        <Grid item xs={12} md={6}>
+        <Grid item xs={12} sm={6} md={6}>
           <Guest convidado={convidados.bueno} even />
         </Grid>
       </Slide>
