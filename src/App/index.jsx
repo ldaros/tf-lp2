@@ -6,6 +6,7 @@ import { cyan, lightGreen } from "@mui/material/colors"; // Cores do material-ui
 import Hero from "../Hero";
 import Guests from "../Guests";
 import Local from "../Local";
+import Discount from "../Discount";
 import Team from "../Team";
 import Footer from "../Footer";
 
@@ -34,6 +35,7 @@ export default class App extends Component {
 				<Hero /> {/* Cabeçalho da pagina */}
 				<Guests /> {/* Seção Convidados */}
 				<Local /> {/* Seção Localização */}
+				<Discount /> {/* Seção Disconto */}
 				<Team /> {/* Seção Equipe */}
 				<Footer /> {/* Seção Rodapé */}
 			</ThemeProvider>
