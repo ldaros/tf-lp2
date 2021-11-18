@@ -4,6 +4,12 @@ object-assign
 @license MIT
 */
 
+/*!
+  * $script.js JS loader & dependency manager
+  * https://github.com/ded/script.js
+  * (c) Dustin Diaz 2014 | License MIT
+  */
+
 /** @license MUI v5.1.1
  *
  * This source code is licensed under the MIT license found in the
