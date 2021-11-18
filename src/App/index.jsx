@@ -8,6 +8,7 @@ import Guests from "../Guests";
 import Local from "../Local";
 import Discount from "../Discount";
 import Team from "../Team";
+import Form from "../Form";
 import Footer from "../Footer";
 
 // Tema personalizado
@@ -37,7 +38,8 @@ export default class App extends Component {
         <Local /> {/* Seção Localização */}
         <Discount /> {/* Seção Disconto */}
         <Team /> {/* Seção Equipe */}
-        <Footer /> {/* Seção Rodapé */}
+        <Form /> {/* Formulário */}
+        <Footer /> {/* Rodapé */}
       </ThemeProvider>
     );
   }
