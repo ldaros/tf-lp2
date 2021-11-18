@@ -1,42 +1,71 @@
 import React from "react";
-import { Grid, Typography, Box } from "@mui/material";
-import { cyan } from "@mui/material/colors";
-import GuestCard from "./GuestCard";
+import { Grid, Typography, Slide } from "@mui/material"; // Componentes Material UI
+import { useTheme } from "@mui/material/styles";
 
-// TODO: Responsividade
+import Guest from "./Guest"; // Componente de Card de convidado
 
-const headerStyle = {
-  textAlign: "center",
-  color: cyan[900],
-  fontWeight: "bold",
+import imgBueno from "./media/bueno.png"; // Imagem Perfil do Bueno
+import imgTenorio from "./media/tenorio.png"; // Imagem Perfil do Tenorio
+
+const convidados = {
+	tenorio: {
+		nome: "Jeferson Tenório",
+		texto:
+			"Escritor de O beijo na parede, eleito o livro do ano pela Associação Gaúcha de Escritores.",
+		img: imgTenorio,
+	},
+	bueno: {
+		nome: "Eduardo Bueno",
+		texto:
+			"Eduardo Bueno é um jornalista, tradutor, escritor e youtuber no canal Buenas Ideias, onde narra a história do Brasil de forma descontraída.",
+		img: imgBueno,
+	},
 };
 
-const subHeaderStyle = {
-  textAlign: "center",
-  fontWeight: "normal",
-  color: "#5A5A5A",
-  fontSize: "0.95em",
-};
+export default function Guests() {
+	const theme = useTheme(); // Importação do tema do Material UI
 
-export default function index() {
-  return (
-    <Grid container spacing={2} alignItems="center" paddingX={3} paddingY={3}>
-      <Grid item xs={12}>
-        <Typography variant="h5" style={headerStyle} mb={2}>
-          Convidados
-        </Typography>
+	return (
+		<Grid
+			container
+			spacing={2}
+			alignItems="stretch"
+			paddingX={{ xs: 3, sm: 8, md: 20, lg: 30 }}
+			paddingY={3}
+			pb={{ xs: 5, md: 8 }}
+		>
+			<Grid item xs={12}>
+				<Typography
+					variant="h5"
+					align="center"
+					color={theme.palette.primary.dark}
+					sx={{ fontSize: { md: "1.9em" } }}
+					mb={1}
+				>
+					Convidados
+				</Typography>
 
-        <Typography style={subHeaderStyle} mb={3}>
-          Confira algums dos autores presentes nesta edição da Feira do Livro:
-        </Typography>
-      </Grid>
+				<Typography
+					mb={3}
+					variant="body2"
+					align="center"
+					color={theme.palette.grayText}
+					sx={{ fontSize: { md: "1em" } }}
+				>
+					Confira alguns dos autores presentes nesta edição da Feira do Livro:
+				</Typography>
+			</Grid>
 
-      <Grid item xs={12} md={6}>
-        <GuestCard tenorio />
-      </Grid>
-      <Grid item xs={12} md={6}>
-        <GuestCard bueno />
-      </Grid>
-    </Grid>
-  );
+			<Slide direction="right" in={true} timeout={1000} mountOnEnter>
+				<Grid item xs={12} sm={6} md={6}>
+					<Guest convidado={convidados.tenorio} />
+				</Grid>
+			</Slide>
+			<Slide direction="left" in={true} timeout={1000} mountOnEnter>
+				<Grid item xs={12} sm={6} md={6}>
+					<Guest convidado={convidados.bueno} even />
+				</Grid>
+			</Slide>
+		</Grid>
+	);
 }

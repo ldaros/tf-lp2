@@ -1,10 +1,15 @@
 import React, { Component } from "react";
+
 import { createTheme, ThemeProvider } from "@mui/material/styles";
-import { cyan, lightGreen } from "@mui/material/colors";
-// import { Grid, Button } from "@mui/material";
+import { cyan, lightGreen } from "@mui/material/colors"; // Cores do material-ui
+
 import Hero from "../Hero";
 import Guests from "../Guests";
-import "./style.scss";
+import Local from "../Local";
+import Discount from "../Discount";
+import Team from "../Team";
+import Form from "../Form";
+import Footer from "../Footer";
 
 //teste de commit 2
 // Tema personalizado
@@ -12,23 +17,30 @@ const theme = createTheme({
   palette: {
     primary: {
       main: cyan[800], // #00838F
+      dark: cyan[900], // #006064
+      contrastText: "#fff",
     },
     secondary: {
       main: lightGreen[700], // #689F38
+      light: lightGreen["A400"], // #B2FF59
+      contrastText: "#fff",
     },
-    accent: {
-      main: lightGreen["A400"], // #B2FF59
-    },
+    grayText: "#656565",
   },
 });
 
-export default class index extends Component {
+export default class App extends Component {
   render() {
     return (
-      // cores do material-ui
+      // Componente ThemeProvider, aplica o tema personalizado
       <ThemeProvider theme={theme}>
-        <Hero />
-        <Guests />
+        <Hero /> {/* Cabeçalho da pagina */}
+        <Guests /> {/* Seção Convidados */}
+        <Local /> {/* Seção Localização */}
+        <Discount /> {/* Seção Disconto */}
+        <Team /> {/* Seção Equipe */}
+        <Form /> {/* Formulário */}
+        <Footer /> {/* Rodapé */}
       </ThemeProvider>
     );
   }

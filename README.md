@@ -2,28 +2,13 @@
 
 Landingpage TeuFuturo squad 4.
 
-## [Prototipo no Figma](https://www.figma.com/file/ZtBINqAhmxyu3ZBikTsaxv/tf-landingpage?node-id=0%3A1)
+[![ldaros - tf-lp2](https://img.shields.io/static/v1?label=ldaros&message=tf-lp2&color=blue&logo=github)](https://github.com/ldaros/tf-lp2 "Go to GitHub repo")
+[![stars - tf-lp2](https://img.shields.io/github/stars/ldaros/tf-lp2?style=social)](https://github.com/ldaros/tf-lp2)
 
-## Utilize a seguinte organização de pastas:
+## Acesse a página aqui:
 
-```
-src/
--- App/
----- index.jsx
----- style.scss
--- List/
----- index.jsx
----- style.scss
-```
+<div align="center">
 
-[Artigo Sobre](https://www.robinwieruch.de/react-folder-structure)
+[![Acessar Página](https://img.shields.io/badge/View_site-GH_Pages-2ea44f?style=for-the-badge)](https://ldaros.github.io/tf-lp2/)
 
-## Extensões e Componentes
-
-Utilize _JSX_ para componentes.
-_SCSS_ para arquivos de estilo.
-
-Para componentes sem estado, utilize function component.
-Componentes com estado, utilize class component.
-
-## Para rodar o projeto em localhost: _npm start_
+</div>
