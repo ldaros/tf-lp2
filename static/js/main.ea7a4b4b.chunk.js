@@ -20,7 +20,7 @@
         A = n(164),
         p = n(24),
         h = n(32),
-        g = n.p + "./static/media/logo.62950018.svg",
+        g = n.p + "tf-lp2/static/media/logo.62950018.svg",
         O = n.p + "static/media/head_temp.c9ba4065.png",
         v = n.p + "static/media/video_bg.2578cd60.webm",
         f = n(1),
