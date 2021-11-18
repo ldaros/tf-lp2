@@ -1,23 +1,29 @@
 import React from "react";
 
-import { Grid, Typography, Grow } from "@mui/material";
+import { Grid, Typography, Grow, Card, CardMedia } from "@mui/material";
 import { useTheme } from "@mui/material/styles";
 import Image from "mui-image"; // Componente para imagens
+import {
+  withScriptjs,
+  withGoogleMap,
+  GoogleMap,
+  Marker,
+} from "react-google-maps";
 
 import imgLocal from "./media/img-local.svg";
 
-// URL do Mapa
-const MAPA =
-  "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3514.470290394818!2d-52.3957468849259!3d-28.25375328256874!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x1d3b037fc8edaa67!2sBourbon%20Shopping%20Passo%20Fundo!5e0!3m2!1spt-BR!2sbr!4v1630606985214!5m2!1spt-BR!2sbr";
-
-// Estiliza mapa dentre do padrão card-mui
-const styleMapa = {
-  borderRadius: "4px",
-  boxShadow:
-    "0px 2px 1px -1px rgba(0,0,0,0.2),0px 1px 1px 0px rgba(0,0,0,0.14),0px 1px 3px 0px rgba(0,0,0,0.12)",
-  overflow: "hidden",
-  border: 0,
-};
+const MyMapComponent = withScriptjs(
+  withGoogleMap((props) => (
+    <GoogleMap
+      defaultZoom={16}
+      defaultCenter={{ lat: -28.252762613612752, lng: -52.393430891121895 }}
+    >
+      <Marker
+        position={{ lat: -28.252762613612752, lng: -52.393430891121895 }}
+      />
+    </GoogleMap>
+  ))
+);
 
 export default function Local() {
   const theme = useTheme(); // importando o tema do material-ui
@@ -67,15 +73,12 @@ export default function Local() {
 
       <Grow in={true} timeout={5000}>
         <Grid item xs={12} md={6} sx={{ height: { xs: "350px", md: "400px" } }}>
-          <iframe
-            src={MAPA}
-            width="100%"
-            height="100%"
-            style={styleMapa}
-            allowFullScreen=""
-            loading="lazy"
-            title="Mapa"
-          ></iframe>
+          <MyMapComponent
+            googleMapURL="https://maps.googleapis.com/maps/api/js?key=AIzaSyBhoVIXzoaaZKDSlUVIkoKizLJ5w7PNq64&v=3.exp&libraries=geometry,drawing,places"
+            loadingElement={<div style={{ height: "100%" }} />}
+            containerElement={<Card sx={{ height: "100%" }} />}
+            mapElement={<CardMedia sx={{ height: "100%", width: "100%" }} />}
+          />
         </Grid>
       </Grow>
     </Grid>
