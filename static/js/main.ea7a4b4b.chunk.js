@@ -21,8 +21,8 @@
         p = n(24),
         h = n(32),
         g = n.p + "tf-lp2/static/media/logo.62950018.svg",
-        O = n.p + "static/media/head_temp.c9ba4065.png",
-        v = n.p + "static/media/video_bg.2578cd60.webm",
+        O = n.p + "tf-lp2/static/media/head_temp.c9ba4065.png",
+        v = n.p + "tf-lp2/static/media/video_bg.2578cd60.webm",
         f = n(1),
         w = {
           position: "absolute",
@@ -129,13 +129,13 @@
           ],
         });
       }
-      var S = n.p + "../media/bueno.212e039a.png",
+      var S = n.p + "tf-lp2/static/media/bueno.212e039a.png",
         C = {
           tenorio: {
             nome: "Jeferson Ten\xf3rio",
             texto:
               "Escritor de O beijo na parede, eleito o livro do ano pela Associa\xe7\xe3o Ga\xfacha de Escritores.",
-            img: n.p + "static/media/tenorio.bfde82cd.png",
+            img: n.p + "tf-lp2/static/media/tenorio.bfde82cd.png",
           },
           bueno: {
             nome: "Eduardo Bueno",
@@ -207,7 +207,7 @@
         });
       }
       var Y = n(146),
-        F = n.p + "static/media/img-local.8f17a308.svg",
+        F = n.p + "tf-lp2/static/media/img-local.8f17a308.svg",
         T = {
           borderRadius: "4px",
           boxShadow:
@@ -295,7 +295,7 @@
         X = n(157),
         H = n(155),
         G = n(156),
-        Z = n.p + "static/media/livros.e1973b55.png",
+        Z = n.p + "tf-lp2/static/media/livros.e1973b55.png",
         q = "https://tf-landingpage.glitch.me/api";
       function N() {
         var e = Object(p.a)(),
@@ -958,11 +958,11 @@
           ],
         });
       }
-      var Ce = n.p + "static/media/pedro.6cb098a2.png",
+      var Ce = n.p + "tf-lp2/static/media/pedro.6cb098a2.png",
         ze = [
           {
             nome: "Luan Daros",
-            img: n.p + "static/media/luan.d39e9d77.png",
+            img: n.p + "tf-lp2/static/media/luan.d39e9d77.png",
             descricao: "Estudante do projeto #TeuFuturo",
             linkedin: "https://www.linkedin.com/in/darosluan/",
             github: "https://github.com/ldaros",
@@ -970,7 +970,7 @@
           },
           {
             nome: "Victor Andr\xe9 Gopinger de Morais",
-            img: n.p + "static/media/victor.bece4e0f.png",
+            img: n.p + "tf-lp2/static/media/victor.bece4e0f.png",
             descricao: "Estudante do projeto #TeuFuturo",
             email: "victor.andre.morais@gmail.com ",
             github: "https://github.com/victormorais123",
@@ -1292,7 +1292,7 @@
           })
         )).apply(this, arguments);
       }
-      var Ve = n.p + "static/media/logo2.30477cd7.svg";
+      var Ve = n.p + "tf-lp2/static/media/logo2.30477cd7.svg";
       function Le() {
         return Object(f.jsxs)(j.a, {
           container: !0,
