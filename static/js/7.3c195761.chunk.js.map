@@ -1,0 +1,1 @@
+{"version":3,"sources":["../node_modules/@mui/material/IconButton/index.js"],"names":[],"mappings":"wGAAA","file":"static/js/7.3c195761.chunk.js","sourcesContent":["export { default } from './IconButton';\nexport { default as iconButtonClasses } from './iconButtonClasses';\nexport * from './iconButtonClasses';"],"sourceRoot":""}
