@@ -92,6 +92,7 @@ export default function Member(props) {
                   <IconButton
                     sx={{ fontSize: 45 }}
                     href={props.membro.linkedin}
+                    target="_blank"
                   >
                     <LinkedIcon />
                   </IconButton>
@@ -99,7 +100,11 @@ export default function Member(props) {
 
                 {/*  github  */}
                 {props.membro.github ? (
-                  <IconButton sx={{ fontSize: 45 }} href={props.membro.github}>
+                  <IconButton
+                    sx={{ fontSize: 45 }}
+                    href={props.membro.github}
+                    target="_blank"
+                  >
                     <GitIcon />
                   </IconButton>
                 ) : null}
