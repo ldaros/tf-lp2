@@ -1,15 +1,15 @@
 {
   "files": {
     "main.css": "/tf-lp2/static/css/main.d9ed5ff5.chunk.css",
-    "main.js": "/tf-lp2/static/js/main.5c80b44b.chunk.js",
-    "main.js.map": "/tf-lp2/static/js/main.5c80b44b.chunk.js.map",
+    "main.js": "/tf-lp2/static/js/main.8dd62884.chunk.js",
+    "main.js.map": "/tf-lp2/static/js/main.8dd62884.chunk.js.map",
     "runtime-main.js": "/tf-lp2/static/js/runtime-main.2adee136.js",
     "runtime-main.js.map": "/tf-lp2/static/js/runtime-main.2adee136.js.map",
-    "static/js/2.22960a47.chunk.js": "/tf-lp2/static/js/2.22960a47.chunk.js",
-    "static/js/2.22960a47.chunk.js.map": "/tf-lp2/static/js/2.22960a47.chunk.js.map",
+    "static/js/2.d310cf12.chunk.js": "/tf-lp2/static/js/2.d310cf12.chunk.js",
+    "static/js/2.d310cf12.chunk.js.map": "/tf-lp2/static/js/2.d310cf12.chunk.js.map",
     "index.html": "/tf-lp2/index.html",
     "static/css/main.d9ed5ff5.chunk.css.map": "/tf-lp2/static/css/main.d9ed5ff5.chunk.css.map",
-    "static/js/2.22960a47.chunk.js.LICENSE.txt": "/tf-lp2/static/js/2.22960a47.chunk.js.LICENSE.txt",
+    "static/js/2.d310cf12.chunk.js.LICENSE.txt": "/tf-lp2/static/js/2.d310cf12.chunk.js.LICENSE.txt",
     "static/media/bueno.abbf4919.webp": "/tf-lp2/static/media/bueno.abbf4919.webp",
     "static/media/emanuel.340d6a9c.webp": "/tf-lp2/static/media/emanuel.340d6a9c.webp",
     "static/media/git.a9372e33.svg": "/tf-lp2/static/media/git.a9372e33.svg",
@@ -27,8 +27,8 @@
   },
   "entrypoints": [
     "static/js/runtime-main.2adee136.js",
-    "static/js/2.22960a47.chunk.js",
+    "static/js/2.d310cf12.chunk.js",
     "static/css/main.d9ed5ff5.chunk.css",
-    "static/js/main.5c80b44b.chunk.js"
+    "static/js/main.8dd62884.chunk.js"
   ]
 }
