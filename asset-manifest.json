@@ -1,23 +1,13 @@
 {
   "files": {
-    "main.js": "/tf-lp2/static/js/main.c055900c.chunk.js",
-    "main.js.map": "/tf-lp2/static/js/main.c055900c.chunk.js.map",
-    "runtime-main.js": "/tf-lp2/static/js/runtime-main.f5f811cb.js",
-    "runtime-main.js.map": "/tf-lp2/static/js/runtime-main.f5f811cb.js.map",
-    "static/js/2.01afaa13.chunk.js": "/tf-lp2/static/js/2.01afaa13.chunk.js",
-    "static/js/2.01afaa13.chunk.js.map": "/tf-lp2/static/js/2.01afaa13.chunk.js.map",
-    "static/js/3.2187e4fe.chunk.js": "/tf-lp2/static/js/3.2187e4fe.chunk.js",
-    "static/js/3.2187e4fe.chunk.js.map": "/tf-lp2/static/js/3.2187e4fe.chunk.js.map",
-    "static/js/4.149245a8.chunk.js": "/tf-lp2/static/js/4.149245a8.chunk.js",
-    "static/js/4.149245a8.chunk.js.map": "/tf-lp2/static/js/4.149245a8.chunk.js.map",
-    "static/js/5.e622151c.chunk.js": "/tf-lp2/static/js/5.e622151c.chunk.js",
-    "static/js/5.e622151c.chunk.js.map": "/tf-lp2/static/js/5.e622151c.chunk.js.map",
-    "static/js/6.654ae3bf.chunk.js": "/tf-lp2/static/js/6.654ae3bf.chunk.js",
-    "static/js/6.654ae3bf.chunk.js.map": "/tf-lp2/static/js/6.654ae3bf.chunk.js.map",
-    "static/js/7.3c195761.chunk.js": "/tf-lp2/static/js/7.3c195761.chunk.js",
-    "static/js/7.3c195761.chunk.js.map": "/tf-lp2/static/js/7.3c195761.chunk.js.map",
+    "main.js": "/tf-lp2/static/js/main.9d5dda4f.chunk.js",
+    "main.js.map": "/tf-lp2/static/js/main.9d5dda4f.chunk.js.map",
+    "runtime-main.js": "/tf-lp2/static/js/runtime-main.2adee136.js",
+    "runtime-main.js.map": "/tf-lp2/static/js/runtime-main.2adee136.js.map",
+    "static/js/2.a83eadbf.chunk.js": "/tf-lp2/static/js/2.a83eadbf.chunk.js",
+    "static/js/2.a83eadbf.chunk.js.map": "/tf-lp2/static/js/2.a83eadbf.chunk.js.map",
     "index.html": "/tf-lp2/index.html",
-    "static/js/2.01afaa13.chunk.js.LICENSE.txt": "/tf-lp2/static/js/2.01afaa13.chunk.js.LICENSE.txt",
+    "static/js/2.a83eadbf.chunk.js.LICENSE.txt": "/tf-lp2/static/js/2.a83eadbf.chunk.js.LICENSE.txt",
     "static/media/bueno.abbf4919.webp": "/tf-lp2/static/media/bueno.abbf4919.webp",
     "static/media/emanuel.340d6a9c.webp": "/tf-lp2/static/media/emanuel.340d6a9c.webp",
     "static/media/git.a9372e33.svg": "/tf-lp2/static/media/git.a9372e33.svg",
@@ -34,8 +24,8 @@
     "static/media/video_bg.2578cd60.webm": "/tf-lp2/static/media/video_bg.2578cd60.webm"
   },
   "entrypoints": [
-    "static/js/runtime-main.f5f811cb.js",
-    "static/js/2.01afaa13.chunk.js",
-    "static/js/main.c055900c.chunk.js"
+    "static/js/runtime-main.2adee136.js",
+    "static/js/2.a83eadbf.chunk.js",
+    "static/js/main.9d5dda4f.chunk.js"
   ]
 }

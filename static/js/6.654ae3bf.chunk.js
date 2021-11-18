@@ -1,2 +1,0 @@
-(this["webpackJsonptf-lp2"]=this["webpackJsonptf-lp2"]||[]).push([[6],{126:function(t,n,p){"use strict";p.r(n);var s=p(121);p.d(n,"default",(function(){return s.a}))}}]);
-//# sourceMappingURL=6.654ae3bf.chunk.js.map
