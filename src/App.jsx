@@ -3,13 +3,14 @@ import React, { Component } from "react";
 import { createTheme, ThemeProvider } from "@mui/material/styles";
 import { cyan, lightGreen } from "@mui/material/colors"; // Cores do material-ui
 
-import Hero from "../Hero";
-import Guests from "../Guests";
-import Local from "../Local";
-import Discount from "../Discount";
-import Team from "../Team";
-import Form from "../Form";
-import Footer from "../Footer";
+import Hero from "./Hero";
+import Guests from "./Guests";
+import Local from "./Local";
+import Discount from "./Discount";
+import Team from "./Team";
+import Form from "./Form";
+import Footer from "./Footer";
+import Scroll from "./Scroll";
 
 //teste de commit 2
 // Tema personalizado
@@ -41,6 +42,7 @@ export default class App extends Component {
         <Team /> {/* Seção Equipe */}
         <Form /> {/* Formulário */}
         <Footer /> {/* Rodapé */}
+        <Scroll />
       </ThemeProvider>
     );
   }
