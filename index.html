@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU"
+      crossorigin="anonymous"
+    />
+  </head>
+  <body>
+    <div class="container">
+      <div class="row justify-content-md-center">
+        <div id="content" class="col-7 d-flex flex-column">
+          <h1 class="display-4 mt-3 text-center">Display Data</h1>
+          <button class="btn btn-primary mt-5 mb-5 " onclick="getData()">
+            Get data
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      async function getData() {
+        const response = await fetch("/api");
+        const data = await response.json();
+        console.log(data);
+
+        for (item of data) {
+          const root = document.createElement("div");
+          root.className = "p-4 bg-light border rounded-3 mb-3";
+
+          const h2 = document.createElement("h3");
+          h2.textContent = item.name;
+
+          const h5 = document.createElement("h5");
+          h5.textContent = item.email;
+          h5.classNmae = "mb-3"
+
+          const p = document.createElement("p");
+          p.textContent = item.message;
+          
+          p.className = "mb-3 mark";
+          
+          const subp = document.createElement("p");
+          subp.textContent = item._id;
+          subp.className = "text-muted";
+
+          root.append(h2);
+          root.append(h5);
+          root.append(p);
+          root.append(subp);
+          
+          document.querySelector("#content").appendChild(root);
+        }
+      }
+    </script>
+  </body>
+</html>
