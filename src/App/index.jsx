@@ -11,6 +11,7 @@ import Team from "../Team";
 import Form from "../Form";
 import Footer from "../Footer";
 
+//teste de commit 2
 // Tema personalizado
 const theme = createTheme({
   palette: {
