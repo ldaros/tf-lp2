@@ -39,6 +39,8 @@ export default function Member(props) {
           component="img"
           image={props.membro.img}
           alt={props.membro.nome}
+          width="100%"
+          height="auto"
         />
 
         <CardContent>
