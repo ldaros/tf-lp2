@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.js": "/tf-lp2/static/js/main.d1e07db0.chunk.js",
-    "main.js.map": "/tf-lp2/static/js/main.d1e07db0.chunk.js.map",
+    "main.js": "/tf-lp2/static/js/main.9d5dda4f.chunk.js",
+    "main.js.map": "/tf-lp2/static/js/main.9d5dda4f.chunk.js.map",
     "runtime-main.js": "/tf-lp2/static/js/runtime-main.2adee136.js",
     "runtime-main.js.map": "/tf-lp2/static/js/runtime-main.2adee136.js.map",
     "static/js/2.a83eadbf.chunk.js": "/tf-lp2/static/js/2.a83eadbf.chunk.js",
@@ -26,6 +26,6 @@
   "entrypoints": [
     "static/js/runtime-main.2adee136.js",
     "static/js/2.a83eadbf.chunk.js",
-    "static/js/main.d1e07db0.chunk.js"
+    "static/js/main.9d5dda4f.chunk.js"
   ]
 }
