@@ -14,9 +14,6 @@ import { useTheme } from "@mui/material/styles";
 
 import { ReactComponent as LinkedIcon } from "./media/linked.svg";
 import { ReactComponent as GitIcon } from "./media/git.svg";
-import { ReactComponent as FaceIcon } from "./media/face.svg";
-import { ReactComponent as GramIcon } from "./media/gram.svg";
-import { ReactComponent as TwitIcon } from "./media/twit.svg";
 
 export default function Member(props) {
   const theme = useTheme(); // importando o tema do material-ui
@@ -102,33 +99,6 @@ export default function Member(props) {
                 {props.membro.github ? (
                   <IconButton sx={{ fontSize: 45 }} href={props.membro.github}>
                     <GitIcon />
-                  </IconButton>
-                ) : null}
-
-                {/*  facebook  */}
-                {props.membro.facebook ? (
-                  <IconButton
-                    sx={{ fontSize: 45 }}
-                    href={props.membro.facebook}
-                  >
-                    <FaceIcon />
-                  </IconButton>
-                ) : null}
-
-                {/*  instagram  */}
-                {props.membro.instagram ? (
-                  <IconButton
-                    sx={{ fontSize: 45 }}
-                    href={props.membro.instagram}
-                  >
-                    <GramIcon />
-                  </IconButton>
-                ) : null}
-
-                {/*  twitter  */}
-                {props.membro.twitter ? (
-                  <IconButton sx={{ fontSize: 45 }} href={props.membro.twitter}>
-                    <TwitIcon />
                   </IconButton>
                 ) : null}
               </Box>

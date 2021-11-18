@@ -5,7 +5,7 @@ import { LoadingButton } from "@mui/lab";
 import { useTheme } from "@mui/material/styles";
 import Image from "mui-image";
 
-import fotolivros from "./media/livros.png";
+import fotolivros from "./media/livros.webp";
 
 const api = "https://tf-landingpage.glitch.me/api";
 // const api = "http://localhost:3100/api";

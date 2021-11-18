@@ -5,7 +5,7 @@ import { useTheme } from "@mui/material/styles"; // Estilos Material UI
 import Image from "mui-image"; // Componente para imagens
 
 import Logo from "./media/logo.svg";
-import BG from "./media/head_temp.png";
+import BG from "./media/head_temp.webp";
 import Video from "./media/video_bg.webm";
 
 const videoBg = {
