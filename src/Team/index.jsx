@@ -48,11 +48,32 @@ const membros = [
 
 export default function Team() {
   const theme = useTheme(); // Importação do tema do Material UI
+
+  const [isVisible, setVisible] = React.useState(false);
+  const [Animate, setAnimate] = React.useState(false);
+
+  // Função para animação do componente
+  React.useEffect(() => {
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => setVisible(entry.isIntersecting));
+    });
+    observer.observe(document.querySelector("#anim1"));
+
+    if (isVisible) setAnimate(true);
+
+    return () => observer.unobserve(document.querySelector("#anim1")); // clean up
+  }, [Animate, isVisible]);
+
   let timeout = 1000;
 
   // Criando um componente para cada membro
   const membrosList = membros.map((membro, i) => (
-    <Slide direction="right" in={true} timeout={(timeout += 500)} key={"t" + i}>
+    <Slide
+      direction="right"
+      in={Animate}
+      timeout={(timeout += 500)}
+      key={"t" + i}
+    >
       <Grid item xs={6} sm={3} md={3}>
         <Member membro={membro} />
       </Grid>
@@ -86,6 +107,7 @@ export default function Team() {
           align="center"
           color="#656565"
           sx={{ fontSize: { md: "1em" } }}
+          id="anim1"
         >
           Pressione no avatar para obter informações sobre contato
         </Typography>
