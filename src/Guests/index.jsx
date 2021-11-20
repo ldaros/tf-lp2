@@ -33,6 +33,7 @@ export default function Guests() {
       paddingX={{ xs: 3, sm: 8, md: 20, lg: 30 }}
       paddingY={3}
       pb={{ xs: 5, md: 8 }}
+      sx={{ overflowX: "hidden" }}
     >
       <Grid item xs={12}>
         <Typography
