@@ -1,10 +1,10 @@
 {
   "files": {
     "main.css": "/tf-lp2/static/css/main.d9ed5ff5.chunk.css",
-    "main.js": "/tf-lp2/static/js/main.0a50c3f8.chunk.js",
-    "main.js.map": "/tf-lp2/static/js/main.0a50c3f8.chunk.js.map",
-    "runtime-main.js": "/tf-lp2/static/js/runtime-main.bc8931cc.js",
-    "runtime-main.js.map": "/tf-lp2/static/js/runtime-main.bc8931cc.js.map",
+    "main.js": "/tf-lp2/static/js/main.da0069d9.chunk.js",
+    "main.js.map": "/tf-lp2/static/js/main.da0069d9.chunk.js.map",
+    "runtime-main.js": "/tf-lp2/static/js/runtime-main.820ccbf3.js",
+    "runtime-main.js.map": "/tf-lp2/static/js/runtime-main.820ccbf3.js.map",
     "static/js/2.b9169dcc.chunk.js": "/tf-lp2/static/js/2.b9169dcc.chunk.js",
     "static/js/2.b9169dcc.chunk.js.map": "/tf-lp2/static/js/2.b9169dcc.chunk.js.map",
     "static/js/3.2bfe4c71.chunk.js": "/tf-lp2/static/js/3.2bfe4c71.chunk.js",
@@ -30,9 +30,9 @@
     "static/media/video_bg.2578cd60.webm": "/tf-lp2/static/media/video_bg.2578cd60.webm"
   },
   "entrypoints": [
-    "static/js/runtime-main.bc8931cc.js",
+    "static/js/runtime-main.820ccbf3.js",
     "static/js/2.b9169dcc.chunk.js",
     "static/css/main.d9ed5ff5.chunk.css",
-    "static/js/main.0a50c3f8.chunk.js"
+    "static/js/main.da0069d9.chunk.js"
   ]
 }
