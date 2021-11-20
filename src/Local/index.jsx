@@ -22,6 +22,33 @@ const styleMapa = {
 export default function Local() {
   const theme = useTheme(); // importando o tema do material-ui
 
+  const [isVisible, setVisible] = React.useState(false);
+  const [Animate, setAnimate] = React.useState(false);
+
+  // Função para animação do componente
+  React.useEffect(() => {
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => setVisible(entry.isIntersecting));
+    });
+    observer.observe(document.querySelector("#anim2"));
+
+    if (isVisible) setAnimate(true);
+
+    return () => observer.unobserve(document.querySelector("#anim2")); // clean up
+  }, [Animate, isVisible]);
+
+  const iframe = (
+    <iframe
+      src={MAPA}
+      width="100%"
+      height="100%"
+      style={styleMapa}
+      allowFullScreen=""
+      loading="lazy"
+      title="Mapa"
+    ></iframe>
+  );
+
   return (
     <Grid
       container
@@ -65,17 +92,9 @@ export default function Local() {
         </Typography>
       </Grid>
 
-      <Grow in={true} timeout={5000}>
+      <Grow in={Animate} timeout={5000} id="anim2">
         <Grid item xs={12} md={6} sx={{ height: { xs: "350px", md: "400px" } }}>
-          <iframe
-            src={MAPA}
-            width="100%"
-            height="100%"
-            style={styleMapa}
-            allowFullScreen=""
-            loading="lazy"
-            title="Mapa"
-          ></iframe>
+          {Animate && iframe}
         </Grid>
       </Grow>
     </Grid>
