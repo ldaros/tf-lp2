@@ -7,7 +7,7 @@ import Image from "mui-image"; // Componente para imagens
 
 import imgLocal from "./media/img-local.svg";
 
-const Map = loadable(() => import("./Map"));
+const Map = loadable(() => import(/* webpackPrefetch: true */ "./Map"));
 
 export default function Local() {
   const theme = useTheme(); // importando o tema do material-ui
@@ -72,7 +72,7 @@ export default function Local() {
 
       <Grow in={Animate} timeout={5000} id="anim2">
         <Grid item xs={12} md={6} sx={{ height: { xs: "350px", md: "400px" } }}>
-          <Map />
+          {Animate && <Map />}
         </Grid>
       </Grow>
     </Grid>
