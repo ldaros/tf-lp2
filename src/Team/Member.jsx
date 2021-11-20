@@ -1,23 +1,11 @@
 import React from "react";
-import {
-  Typography,
-  Card,
-  CardMedia,
-  CardContent,
-  Modal,
-  Fade,
-  Avatar,
-  Box,
-  IconButton,
-} from "@mui/material";
-import { useTheme } from "@mui/material/styles";
+import { Typography, Card, CardMedia, CardContent } from "@mui/material";
 
-import { ReactComponent as LinkedIcon } from "./media/linked.svg";
-import { ReactComponent as GitIcon } from "./media/git.svg";
+import loadable from "@loadable/component";
+
+const Contact = loadable(() => import("./Contact"));
 
 export default function Member(props) {
-  const theme = useTheme(); // importando o tema do material-ui
-
   // handles pro modal
   const [open, setOpen] = React.useState(false);
   const handleOpen = () => setOpen(true);
@@ -50,69 +38,8 @@ export default function Member(props) {
         </CardContent>
       </Card>
 
-      <Modal open={open} onClose={handleClose} closeAfterTransition>
-        <Fade in={open}>
-          <Card
-            sx={{
-              position: "absolute",
-              top: "50%",
-              left: "50%",
-              transform: "translate(-50%, -50%)",
-              width: { xs: "90%", md: "500px" },
-            }}
-            align="center"
-          >
-            <CardContent>
-              <Avatar src={props.membro.img} sx={{ width: 80, height: 80 }} />
-
-              <Typography
-                variant="h6"
-                component="h2"
-                align="center"
-                color={theme.palette.primary.dark}
-              >
-                {props.membro.nome}
-              </Typography>
-
-              <Typography variant="body1" sx={{ mt: 2 }}>
-                "{props.membro.descricao}"
-              </Typography>
-
-              {/*  email  */}
-              {props.membro.email ? (
-                <Typography variant="body2" mt={2} color="gray">
-                  {props.membro.email}
-                </Typography>
-              ) : null}
-
-              {/*  Icones  */}
-              <Box mt={2}>
-                {/*  linkedin  */}
-                {props.membro.linkedin ? (
-                  <IconButton
-                    sx={{ fontSize: 45 }}
-                    href={props.membro.linkedin}
-                    target="_blank"
-                  >
-                    <LinkedIcon />
-                  </IconButton>
-                ) : null}
-
-                {/*  github  */}
-                {props.membro.github ? (
-                  <IconButton
-                    sx={{ fontSize: 45 }}
-                    href={props.membro.github}
-                    target="_blank"
-                  >
-                    <GitIcon />
-                  </IconButton>
-                ) : null}
-              </Box>
-            </CardContent>
-          </Card>
-        </Fade>
-      </Modal>
+      {/* Modal */}
+      <Contact open={open} handleClose={handleClose} membro={props.membro} />
     </>
   );
 }
