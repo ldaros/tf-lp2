@@ -1,21 +1,13 @@
 {
   "files": {
-    "main.css": "/tf-lp2/static/css/main.d9ed5ff5.chunk.css",
-    "main.js": "/tf-lp2/static/js/main.893d81b8.chunk.js",
-    "main.js.map": "/tf-lp2/static/js/main.893d81b8.chunk.js.map",
-    "runtime-main.js": "/tf-lp2/static/js/runtime-main.1555e877.js",
-    "runtime-main.js.map": "/tf-lp2/static/js/runtime-main.1555e877.js.map",
-    "static/js/2.a80d1b06.chunk.js": "/tf-lp2/static/js/2.a80d1b06.chunk.js",
-    "static/js/2.a80d1b06.chunk.js.map": "/tf-lp2/static/js/2.a80d1b06.chunk.js.map",
-    "static/js/3.d15373bb.chunk.js": "/tf-lp2/static/js/3.d15373bb.chunk.js",
-    "static/js/3.d15373bb.chunk.js.map": "/tf-lp2/static/js/3.d15373bb.chunk.js.map",
-    "static/js/4.41e55314.chunk.js": "/tf-lp2/static/js/4.41e55314.chunk.js",
-    "static/js/4.41e55314.chunk.js.map": "/tf-lp2/static/js/4.41e55314.chunk.js.map",
-    "static/js/5.ee230b63.chunk.js": "/tf-lp2/static/js/5.ee230b63.chunk.js",
-    "static/js/5.ee230b63.chunk.js.map": "/tf-lp2/static/js/5.ee230b63.chunk.js.map",
+    "main.js": "/tf-lp2/static/js/main.339f9283.chunk.js",
+    "main.js.map": "/tf-lp2/static/js/main.339f9283.chunk.js.map",
+    "runtime-main.js": "/tf-lp2/static/js/runtime-main.2adee136.js",
+    "runtime-main.js.map": "/tf-lp2/static/js/runtime-main.2adee136.js.map",
+    "static/js/2.eb22c5bd.chunk.js": "/tf-lp2/static/js/2.eb22c5bd.chunk.js",
+    "static/js/2.eb22c5bd.chunk.js.map": "/tf-lp2/static/js/2.eb22c5bd.chunk.js.map",
     "index.html": "/tf-lp2/index.html",
-    "static/css/main.d9ed5ff5.chunk.css.map": "/tf-lp2/static/css/main.d9ed5ff5.chunk.css.map",
-    "static/js/2.a80d1b06.chunk.js.LICENSE.txt": "/tf-lp2/static/js/2.a80d1b06.chunk.js.LICENSE.txt",
+    "static/js/2.eb22c5bd.chunk.js.LICENSE.txt": "/tf-lp2/static/js/2.eb22c5bd.chunk.js.LICENSE.txt",
     "static/media/bueno.abbf4919.webp": "/tf-lp2/static/media/bueno.abbf4919.webp",
     "static/media/emanuel.340d6a9c.webp": "/tf-lp2/static/media/emanuel.340d6a9c.webp",
     "static/media/git.a9372e33.svg": "/tf-lp2/static/media/git.a9372e33.svg",
@@ -32,9 +24,8 @@
     "static/media/video_bg.2578cd60.webm": "/tf-lp2/static/media/video_bg.2578cd60.webm"
   },
   "entrypoints": [
-    "static/js/runtime-main.1555e877.js",
-    "static/js/2.a80d1b06.chunk.js",
-    "static/css/main.d9ed5ff5.chunk.css",
-    "static/js/main.893d81b8.chunk.js"
+    "static/js/runtime-main.2adee136.js",
+    "static/js/2.eb22c5bd.chunk.js",
+    "static/js/main.339f9283.chunk.js"
   ]
 }
