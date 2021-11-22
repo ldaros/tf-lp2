@@ -1,4 +1,4 @@
-import React, { Component } from "react";
+import React from "react";
 
 import { createTheme, ThemeProvider } from "@mui/material/styles";
 import { cyan, lightGreen } from "@mui/material/colors"; // Cores do material-ui
@@ -10,12 +10,11 @@ import Discount from "./Discount";
 import Team from "./Team";
 import Form from "./Form";
 import Footer from "./Footer";
-import Scroll from "./Scroll";
 
-//teste de commit 2
 // Tema personalizado
 const theme = createTheme({
   palette: {
+    type: "light",
     primary: {
       main: cyan[800], // #00838F
       dark: cyan[900], // #006064
@@ -30,20 +29,17 @@ const theme = createTheme({
   },
 });
 
-export default class App extends Component {
-  render() {
-    return (
-      // Componente ThemeProvider, aplica o tema personalizado
-      <ThemeProvider theme={theme}>
-        <Hero /> {/* Cabeçalho da pagina */}
-        <Guests /> {/* Seção Convidados */}
-        <Local /> {/* Seção Localização */}
-        <Discount /> {/* Seção Disconto */}
-        <Team /> {/* Seção Equipe */}
-        <Form /> {/* Formulário */}
-        <Footer /> {/* Rodapé */}
-        <Scroll />
-      </ThemeProvider>
-    );
-  }
+export default function App() {
+  return (
+    // Componente ThemeProvider, aplica o tema personalizado
+    <ThemeProvider theme={theme}>
+      <Hero /> {/* Cabeçalho da pagina */}
+      <Guests /> {/* Seção Convidados */}
+      <Local /> {/* Seção Localização */}
+      <Discount /> {/* Seção Disconto */}
+      <Team /> {/* Seção Equipe */}
+      <Form /> {/* Formulário */}
+      <Footer /> {/* Rodapé */}
+    </ThemeProvider>
+  );
 }

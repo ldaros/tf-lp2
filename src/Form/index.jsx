@@ -11,14 +11,10 @@ import {
   Typography,
 } from "@mui/material";
 import { LoadingButton } from "@mui/lab";
-import { useTheme } from "@mui/material/styles";
 
-const api = "https://tf-landingpage.glitch.me/api";
-// const api = "http://localhost:3100/api";
+import { validateEmail, SubmitData } from "../Utils";
 
 export default function Form() {
-  const theme = useTheme();
-
   // estado do formulário
   const [name, setName] = React.useState("");
   const [email, setEmail] = React.useState("");
@@ -65,7 +61,7 @@ export default function Form() {
         <Typography
           variant="h5"
           align="center"
-          color={theme.palette.primary.dark}
+          color="primary.dark"
           sx={{ fontSize: { md: "1.9em" } }}
           mb={1}
         >
@@ -166,8 +162,8 @@ export default function Form() {
     if (name.length === 0) {
       setNameError("O nome é obrigatório");
       passed = false;
-    } else if (!validateName(name)) {
-      setNameError("O nome deve conter apenas letras");
+    } else if (name.length < 3) {
+      setNameError("O nome deve ter no mínimo 3 caracteres");
       passed = false;
     } else {
       setNameError("");
@@ -204,57 +200,6 @@ export default function Form() {
     }
 
     // envia o formulário
-    SubmitData(name, email, message, checked, setLoading, openSnack);
+    SubmitData(name, email, message, checked, null, setLoading, openSnack);
   }
-}
-
-// função que valida o e-mail
-function validateEmail(email) {
-  // expressão regular: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Regular_Expressions
-  const re =
-    /^(([^<>()\]\\.,;:\s@"]+(\.[^<>()\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
-
-  return re.test(String(email).toLowerCase());
-}
-
-// função que valida nome e sobrenome
-function validateName(name) {
-  const re = /^[a-zA-Z ]+$/;
-
-  return re.test(String(name).toLowerCase());
-}
-
-/** Enviar dados de formulario */
-async function SubmitData(name, email, message, subscribe, loading, feedback) {
-  loading(true);
-
-  // empacotar os dados
-  const data = {
-    name: name,
-    email: email,
-    message: message,
-    subscribe: subscribe,
-  };
-
-  // parametros da requisição
-  const options = {
-    method: "POST",
-    headers: {
-      "Content-Type": "application/json",
-    },
-    body: JSON.stringify(data),
-  };
-
-  // enviar dados
-  const request = await fetch(api, options);
-
-  const recieve = await request.json();
-
-  if (recieve.status === 200) {
-    feedback(true);
-  } else {
-    feedback(false);
-  }
-
-  loading(false);
 }

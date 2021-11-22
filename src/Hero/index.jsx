@@ -1,7 +1,6 @@
 import React from "react";
 
 import { Grid, Typography } from "@mui/material"; // Componentes Material UI
-import { useTheme } from "@mui/material/styles"; // Estilos Material UI
 import Image from "mui-image"; // Componente para imagens
 
 import Logo from "./media/logo.svg";
@@ -19,8 +18,6 @@ const videoBg = {
 };
 
 export default function Hero() {
-  const theme = useTheme();
-
   return (
     <Grid
       container // Este componente se comporta como um container.
@@ -59,7 +56,7 @@ export default function Hero() {
         <Typography
           variant="body1"
           fontWeight="bold"
-          color={theme.palette.secondary.light}
+          color="secondary.light"
           sx={{ fontSize: { md: "1.4em" } }}
         >
           Dias 8 a 15 de Dezembro.

@@ -10,14 +10,10 @@ import {
   Typography,
 } from "@mui/material";
 
-import { useTheme } from "@mui/material/styles";
-
 import { ReactComponent as LinkedIcon } from "./media/linked.svg";
 import { ReactComponent as GitIcon } from "./media/git.svg";
 
 export default function Contact(props) {
-  const theme = useTheme();
-
   return (
     <Modal open={props.open} onClose={props.handleClose} closeAfterTransition>
       <Fade in={props.open}>
@@ -38,7 +34,7 @@ export default function Contact(props) {
               variant="h6"
               component="h2"
               align="center"
-              color={theme.palette.primary.dark}
+              color="primary.dark"
             >
               {props.membro.nome}
             </Typography>
@@ -49,7 +45,7 @@ export default function Contact(props) {
 
             {/*  email  */}
             {props.membro.email && (
-              <Typography variant="body2" mt={2} color="gray">
+              <Typography variant="body2" mt={2} color="grayText">
                 {props.membro.email}
               </Typography>
             )}

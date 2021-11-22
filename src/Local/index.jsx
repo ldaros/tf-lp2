@@ -1,21 +1,17 @@
 import React from "react";
-import loadable from "@loadable/component";
 
 import { Grid, Typography, Grow } from "@mui/material";
-import { useTheme } from "@mui/material/styles";
 import Image from "mui-image"; // Componente para imagens
 
 import imgLocal from "./media/img-local.svg";
 
-const Map = loadable(() => import(/* webpackPrefetch: true */ "./Map"));
+import Map from "./Map";
 
 export default function Local() {
-  const theme = useTheme(); // importando o tema do material-ui
-
   const [isVisible, setVisible] = React.useState(false);
   const [Animate, setAnimate] = React.useState(false);
 
-  // Função para animação do componente
+  // Função que controla o estado de visibilidade do mapa
   React.useEffect(() => {
     const observer = new IntersectionObserver((entries) => {
       entries.forEach((entry) => setVisible(entry.isIntersecting));
@@ -32,7 +28,7 @@ export default function Local() {
       container
       spacing={2}
       alignItems="center"
-      sx={{ backgroundColor: theme.palette.primary.main }}
+      sx={{ backgroundColor: "primary.main" }}
       paddingX={{ xs: 3, sm: 8, md: 20, lg: 30 }}
       paddingY={3}
       pb={{ xs: 5, md: 8 }}

@@ -1,16 +1,14 @@
 import React from "react";
 
-import { Grid, Typography, Slide } from "@mui/material"; // Componentes Material UI
-import { useTheme } from "@mui/material/styles";
-
-import loadable from "@loadable/component";
+import { Grid, Typography } from "@mui/material"; // Componentes Material UI
 
 import img1 from "./media/pedro.webp";
 import img2 from "./media/luan.webp";
 import img3 from "./media/victor.webp";
 import img4 from "./media/emanuel.webp";
 
-const Member = loadable(() => import("./Member"));
+import Member from "./Member";
+import Contact from "./Contact";
 
 // Lista de membros
 const membros = [
@@ -49,37 +47,21 @@ const membros = [
 ];
 
 export default function Team() {
-  const theme = useTheme(); // Importação do tema do Material UI
+  const [open, setOpen] = React.useState(false);
+  const [selectedMember, setSelectedMember] = React.useState(0);
 
-  const [isVisible, setVisible] = React.useState(false);
-  const [Animate, setAnimate] = React.useState(false);
+  const handleOpen = (i) => {
+    setOpen(true);
+    setSelectedMember(i);
+  };
 
-  // Função para animação do componente
-  React.useEffect(() => {
-    const observer = new IntersectionObserver((entries) => {
-      entries.forEach((entry) => setVisible(entry.isIntersecting));
-    });
-    observer.observe(document.querySelector("#anim1"));
-
-    if (isVisible) setAnimate(true);
-
-    return () => observer.unobserve(document.querySelector("#anim1")); // clean up
-  }, [Animate, isVisible]);
-
-  let timeout = 1000;
+  const handleClose = () => setOpen(false);
 
   // Criando um componente para cada membro
   const membrosList = membros.map((membro, i) => (
-    <Slide
-      direction="right"
-      in={Animate}
-      timeout={(timeout += 500)}
-      key={"t" + i}
-    >
-      <Grid item xs={6} sm={3} md={3}>
-        {Animate && <Member membro={membro} />}
-      </Grid>
-    </Slide>
+    <Grid item xs={6} sm={3} md={3} key={i} onClick={() => handleOpen(i)}>
+      <Member membro={membro} />
+    </Grid>
   ));
 
   return (
@@ -96,7 +78,7 @@ export default function Team() {
         <Typography
           variant="h5"
           align="center"
-          color={theme.palette.primary.dark}
+          color="primary.dark"
           sx={{ fontSize: { md: "1.9em" } }}
           mb={1}
         >
@@ -116,6 +98,13 @@ export default function Team() {
       </Grid>
 
       {membrosList}
+
+      {/* Modal */}
+      <Contact
+        open={open}
+        handleClose={handleClose}
+        membro={membros[selectedMember]}
+      />
     </Grid>
   );
 }

@@ -1,6 +1,5 @@
 import React from "react";
 import { Grid, Typography, Slide } from "@mui/material"; // Componentes Material UI
-import { useTheme } from "@mui/material/styles";
 
 import Guest from "./Guest"; // Componente de Card de convidado
 
@@ -23,8 +22,6 @@ const convidados = {
 };
 
 export default function Guests() {
-  const theme = useTheme(); // Importação do tema do Material UI
-
   return (
     <Grid
       container
@@ -39,7 +36,7 @@ export default function Guests() {
         <Typography
           variant="h5"
           align="center"
-          color={theme.palette.primary.dark}
+          color="primary.dark"
           sx={{ fontSize: { md: "1.9em" } }}
           mb={1}
         >
@@ -50,7 +47,7 @@ export default function Guests() {
           mb={3}
           variant="body2"
           align="center"
-          color={theme.palette.grayText}
+          color="grayText"
           sx={{ fontSize: { md: "1em" } }}
         >
           Confira alguns dos autores presentes nesta edição da Feira do Livro:

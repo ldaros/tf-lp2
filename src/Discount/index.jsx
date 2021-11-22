@@ -2,17 +2,13 @@ import React from "react";
 
 import { Typography, TextField, Grid, Alert, Snackbar } from "@mui/material";
 import { LoadingButton } from "@mui/lab";
-import { useTheme } from "@mui/material/styles";
 import Image from "mui-image";
+
+import { validateEmail, SubmitData } from "../Utils";
 
 import fotolivros from "./media/livros.webp";
 
-const api = "https://tf-landingpage.glitch.me/api";
-// const api = "http://localhost:3100/api";
-
 export default function Discount() {
-  const theme = useTheme();
-
   const [email, setEmail] = React.useState("");
   const [emailError, setEmailError] = React.useState("");
 
@@ -57,7 +53,7 @@ export default function Discount() {
           variant="h5"
           align="center"
           fontWeight="bold"
-          color={theme.palette.primary.dark}
+          color="primary.dark"
           sx={{ mb: { xs: 1, md: 1 }, fontSize: { xs: "1.1em", md: "1.4em" } }}
           mt={2}
         >
@@ -123,51 +119,6 @@ export default function Discount() {
       return;
     }
     // envia o formulário
-    SubmitData(email, setLoading, openSnack);
+    SubmitData(null, email, null, true, true, setLoading, openSnack);
   }
-}
-
-// função que valida o e-mail
-function validateEmail(email) {
-  // expressão regular: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Regular_Expressions
-  const re =
-    /^(([^<>()\]\\.,;:\s@"]+(\.[^<>()\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
-
-  return re.test(String(email).toLowerCase());
-}
-
-/** Enviar dados de formulario */
-async function SubmitData(email, loading, feedback) {
-  loading(true);
-
-  // empacotar os dados
-  const data = {
-    email: email,
-    subscribe: true,
-    only_subscribe: true,
-    message: "",
-    name: "",
-  };
-
-  // parametros da requisição
-  const options = {
-    method: "POST",
-    headers: {
-      "Content-Type": "application/json",
-    },
-    body: JSON.stringify(data),
-  };
-
-  // enviar dados
-  const request = await fetch(api, options);
-
-  const recieve = await request.json();
-
-  if (recieve.status === 200) {
-    feedback(true);
-  } else {
-    feedback(false);
-  }
-
-  loading(false);
 }
